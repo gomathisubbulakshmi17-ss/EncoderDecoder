@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Data Encoder & Decoder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔐 Smart Data Encoder & Decoder</h1>
+
+    <label>Select Category</label>
+    <br><br>
+
+    <select id="category">
+        <option value="">--Select--</option>
+        <option value="Student">Student</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Admin">Admin</option>
+        <option value="Guest">Guest</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Manager">Manager</option>
+        <option value="Staff">Staff</option>
+        <option value="Principal">Principal</option>
+        <option value="Security">Security</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="encodeData()">🔒 Encode</button>
+    <button onclick="decodeData()">🔓 Decode</button>
+    <button onclick="resetData()">🔄 Reset</button>
+
+    <h3>Encoded Code</h3>
+    <p id="encoded"></p>
+
+    <hr>
+
+    <h3>Enter Binary Code</h3>
+
+    <input type="text" id="binaryCode" placeholder="Enter Binary Code">
+
+    <br><br>
+
+    <button onclick="decodeInput()">Decode Code</button>
+
+    <h3>Decoded Category</h3>
+    <p id="decoded"></p>
+
+    <hr>
+
+    <h2>Truth Table</h2>
+
+    <table border="1">
+        <tr>
+            <th>Category</th>
+            <th>Binary Code</th>
+        </tr>
+        <tr><td>Student</td><td>0000</td></tr>
+        <tr><td>Teacher</td><td>0001</td></tr>
+        <tr><td>Admin</td><td>0010</td></tr>
+        <tr><td>Guest</td><td>0011</td></tr>
+        <tr><td>Doctor</td><td>0100</td></tr>
+        <tr><td>Engineer</td><td>0101</td></tr>
+        <tr><td>Manager</td><td>0110</td></tr>
+        <tr><td>Staff</td><td>0111</td></tr>
+        <tr><td>Principal</td><td>1000</td></tr>
+        <tr><td>Security</td><td>1001</td></tr>
+    </table>
+
+    <hr>
+
+    <h2>Project Description</h2>
+
+    <p>
+        This project demonstrates a Smart Data Encoder and Decoder.
+        It converts category names into binary codes (Encoding) and
+        converts binary codes back into category names (Decoding).
+        Invalid binary codes are also detected.
+    </p>
+    <hr>
+
+<h2>Test Cases</h2>
+
+<table border="1">
+    <tr>
+        <th>Test Case</th>
+        <th>Input</th>
+        <th>Expected Output</th>
+        <th>Status</th>
+    </tr>
+
+    <tr><td>1</td><td>Student</td><td>0000</td><td>Pass</td></tr>
+    <tr><td>2</td><td>Teacher</td><td>0001</td><td>Pass</td></tr>
+    <tr><td>3</td><td>Admin</td><td>0010</td><td>Pass</td></tr>
+    <tr><td>4</td><td>Guest</td><td>0011</td><td>Pass</td></tr>
+    <tr><td>5</td><td>Doctor</td><td>0100</td><td>Pass</td></tr>
+    <tr><td>6</td><td>Engineer</td><td>0101</td><td>Pass</td></tr>
+    <tr><td>7</td><td>Manager</td><td>0110</td><td>Pass</td></tr>
+    <tr><td>8</td><td>Staff</td><td>0111</td><td>Pass</td></tr>
+    <tr><td>9</td><td>Principal</td><td>1000</td><td>Pass</td></tr>
+    <tr><td>10</td><td>Security</td><td>1001</td><td>Pass</td></tr>
+</table>
+
+<hr>
+
+<h2>Synthetic Dataset</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Category</th>
+        <th>Binary Code</th>
+    </tr>
+
+    <tr><td>101</td><td>Student</td><td>0000</td></tr>
+    <tr><td>102</td><td>Teacher</td><td>0001</td></tr>
+    <tr><td>103</td><td>Admin</td><td>0010</td></tr>
+    <tr><td>104</td><td>Guest</td><td>0011</td></tr>
+    <tr><td>105</td><td>Doctor</td><td>0100</td></tr>
+    <tr><td>106</td><td>Engineer</td><td>0101</td></tr>
+    <tr><td>107</td><td>Manager</td><td>0110</td></tr>
+    <tr><td>108</td><td>Staff</td><td>0111</td></tr>
+    <tr><td>109</td><td>Principal</td><td>1000</td></tr>
+    <tr><td>110</td><td>Security</td><td>1001</td></tr>
+</table>
+
+<script src="script.js"></script>
+
+</div>
+
+</body>
+</html>
